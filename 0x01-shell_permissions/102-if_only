@@ -1,5 +1,2 @@
 #!/bin/bash
-current_owner=$(stat -c %U hello)
-if [ "$current_owner" = "guillaume" ]; then
-chown betty hello
-fi
+[ "$(stat -c %U hello)" = "guillaume" ] && chown betty hello
