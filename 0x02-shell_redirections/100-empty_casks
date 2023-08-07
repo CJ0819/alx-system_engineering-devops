@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -type f -empty -o -type d -empty | sort | tr '\n' '\0' | xargs -0 echo
