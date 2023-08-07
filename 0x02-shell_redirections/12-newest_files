@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lt --time=atime | awk 'NR > 1 {print $9}' | head -n 10
+ls -tl | head
