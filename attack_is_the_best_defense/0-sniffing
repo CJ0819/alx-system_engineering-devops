@@ -1,0 +1,14 @@
+**Insecure Authentication Flow Analysis**
+
+This script demonstrates a login process with Sendgrid's SMTP server. While the script functions, let's analyze the security aspects of the communication:
+
+1. **Insecure Authentication Methods:**
+
+   - The server offers authentication mechanisms like PLAIN and LOGIN. These methods transmit the username and password in plain text format during the handshake. This makes them vulnerable to sniffing attacks where someone can intercept the network traffic and steal the credentials.
+
+2. **Recommendations for Secure Communication:**
+
+   - **STARTTLS:** This protocol encrypts the entire communication channel after the initial handshake. This would prevent anyone from sniffing the data after the initial exchange.
+   - **SASL (Simple Authentication and Security Layer):** This framework provides a secure way to authenticate users with various mechanisms. It doesn't transmit passwords in plain text.
+   - **OAuth:** This method allows delegated authorization using tokens instead of revealing user credentials directly.
+
