@@ -1,0 +1,14 @@
+User Input: The journey starts with the user pressing the "g" key, triggering the browser's auto-complete function and suggesting relevant URLs. Pressing Enter sends a signal to the computer.
+OS Interrupts: The key press is converted into an electrical signal and interpreted by the OS. Different events occur depending on the keyboard type (USB, virtual).
+Browser: The browser receives the URL, parses it (separating protocol, hostname, resource), and checks its cache for the domain.
+DNS Lookup: If not cached, the browser calls a function to resolve the hostname ("google.com") into an IP address using the DNS (Domain Name System). This might involve contacting multiple servers.
+ARP (Address Resolution Protocol): The network library uses ARP to find the MAC address of the device with the target IP address (usually the router).
+Opening a Socket: The browser establishes a connection with the server using a TCP socket. Packets are created and travel through various network layers (link, network, transport) until they reach the destination server.
+TLS Handshake (HTTPS only): For secure connections (HTTPS), a TLS handshake occurs to establish an encrypted communication channel.
+HTTP Protocol: The browser sends an HTTP request (usually GET) to the server, specifying the resource to retrieve. The server responds with a status code (e.g., 200 OK) and the requested content (HTML, CSS, images).
+Server-side Processing: The web server processes the request, locates the resources, and sends them back to the browser.
+HTML Parsing: The browser's rendering engine parses the HTML content, building a Document Object Model (DOM) tree.
+CSS Interpretation: CSS files are parsed to determine styling information for the webpage elements.
+Page Rendering: A "render tree" is created based on the DOM and CSS, calculating positions and layouts of elements. This might involve multiple steps and optimizations.
+JavaScript Execution: JavaScript code might be executed at various points, potentially causing further network requests and modifications to the page.
+

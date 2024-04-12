@@ -1,0 +1,12 @@
+User Types URL: The user enters "https://www.google.com" into their browser.
+DNS Resolution: The browser asks a DNS server to find the IP address for "www.google.com" (like asking for directions).
+HTTPS Request: The browser sends a secure request to the Google server's IP address.
+Firewall: The request passes through a security filter (firewall) to ensure it's safe.
+Load Balancer: If needed, the request is balanced among Google's servers for efficient handling.
+Web Server: The request reaches a web server like NGINX, which handles basic webpage delivery.
+Application Server: Sometimes, an application server like Apache is involved for more dynamic content.
+Database: The application server might check a database for additional info.
+Web Server Responds: The server gathers everything needed and sends a response back.
+Client Receives Response: The browser gets the response.
+Client Decrypts Response: The browser unlocks and reads the encrypted response.
+Web Page Displayed: The browser translates the response into a webpage and shows it to the user.
